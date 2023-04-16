@@ -43,7 +43,7 @@ const ApiMenu = ({
       handleConfirm={handleSave}
     >
       <div className='p-6 border-b border-gray-200 dark:border-gray-600'>
-        <label className='flex gap-2 text-gray-900 dark:text-gray-300 text-sm items-center mb-4'>
+        {/* <label className='flex gap-2 text-gray-900 dark:text-gray-300 text-sm items-center mb-4'>
           <input
             type='checkbox'
             checked={_customEndpoint}
@@ -51,7 +51,7 @@ const ApiMenu = ({
             onChange={handleToggleCustomEndpoint}
           />
           {t('customEndpoint', { ns: 'api' })}
-        </label>
+        </label> */}
 
         <div className='flex gap-2 items-center justify-center mb-6'>
           <div className='min-w-fit text-gray-900 dark:text-gray-300 text-sm'>
@@ -62,6 +62,7 @@ const ApiMenu = ({
               type='text'
               className='text-gray-800 dark:text-white p-3 text-sm border-none bg-gray-200 dark:bg-gray-600 rounded-md m-0 w-full mr-0 h-8 focus:outline-none'
               value={_apiEndpoint}
+              readOnly
               onChange={(e) => {
                 _setApiEndpoint(e.target.value);
               }}
@@ -95,7 +96,7 @@ const ApiMenu = ({
               ns='api'
               components={[
                 <a
-                  href='https://platform.openai.com/account/api-keys'
+                  href='https://openaimax.com'
                   className='link'
                   target='_blank'
                 />,
@@ -104,10 +105,6 @@ const ApiMenu = ({
           </p>
 
           <p>{t('securityMessage', { ns: 'api' })}</p>
-
-          <p>{t('apiEndpoint.description', { ns: 'api' })}</p>
-
-          <p>{t('apiEndpoint.warn', { ns: 'api' })}</p>
         </div>
       </div>
     </PopupModal>
