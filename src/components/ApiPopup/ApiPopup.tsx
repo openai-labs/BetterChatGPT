@@ -61,7 +61,7 @@ const ApiPopup = () => {
             ns='api'
             components={[
               <a
-                href='https://openaimax.com'
+                href='https://openaimax.com/dashboard'
                 className='link'
                 target='_blank'
               />,
