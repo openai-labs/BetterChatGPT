@@ -68,7 +68,7 @@ const useStore = create<StoreState>()(
       ...createToastSlice(set, get),
     }),
     {
-      name: 'free-chat-gpt',
+      name: 'openaimax-chat-gpt',
       partialize: (state) => createPartializedState(state),
       version: 8,
       migrate: (persistedState, version) => {

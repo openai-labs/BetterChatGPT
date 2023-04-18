@@ -11,14 +11,11 @@ export interface AuthSlice {
 }
 
 export const createAuthSlice: StoreSlice<AuthSlice> = (set, get) => ({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY || undefined,
+  apiKey:  localStorage.getItem('openaimax_api_key') || undefined,
   apiEndpoint: defaultAPIEndpoint,
   firstVisit: true,
   setApiKey: (apiKey: string) => {
-    set((prev: AuthSlice) => ({
-      ...prev,
-      apiKey: apiKey,
-    }));
+    throw new Error('forbidden to set api key')
   },
   setApiEndpoint: (apiEndpoint: string) => {
     set((prev: AuthSlice) => ({

@@ -25,7 +25,6 @@ const MenuOptions = () => {
         {googleClientId && <GoogleSync clientId={googleClientId} />}
         <ClearConversation />
         <ImportExportChat />
-        <Api />
         <SettingsMenu />
       </div>
     </>
